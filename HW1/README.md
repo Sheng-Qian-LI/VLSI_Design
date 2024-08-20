@@ -1,6 +1,6 @@
-### Please refer to the HW1.pdf for details.
+### Please refer to the 2023_VLSI_HW1.pdf for details.
 
-# **HW1 : Hybrid Images**  
+# **HW1 : Inverter simulation**  
 
-  #### Use Python to implement high-pass and low-pass filters on photo and combine them to achieve different effects for near and far objects.  
+  #### In this assignment, I will design the size of the inverter and perform simulations using 180nm and 14nm process technologies. The simulations will be conducted under three process corners (TT, SS, FF).
 

@@ -1,4 +1,4 @@
-### Please refer to the 2023_VLSI_HW1.pdf & HW1_111063517_report.pdf for details.
+### 📌Please refer to the 2023_VLSI_HW1.pdf & HW1_111063517_report.pdf for details.
 
 # **HW1 : Inverter simulation**  
 

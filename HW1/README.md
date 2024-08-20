@@ -10,3 +10,5 @@
 ###### NMOS : (W/L) = 1um/0.18um  
 
 ### Result
+| Corner | PMOS size (W/L) |
+|  TT    | 5.4u/0.18u      |

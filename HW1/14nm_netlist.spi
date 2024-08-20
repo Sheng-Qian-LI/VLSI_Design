@@ -1,0 +1,65 @@
+*  Generated for: PrimeSim
+*  Design library name: HW1
+*  Design cell name: inv
+*  Design view name: schematic
+.lib '/home/m111/m111063517/VLSIdesign/HW1/14/PDK/PDK/SAED14nm/SAED14_PDK/hspice/saed14nm.lib' TT
+.param IN=0
+*Custom Compiler Version U-2023.03-SP1
+*Tue Oct 24 11:18:19 2023
+
+.global gnd!
+********************************************************************************
+* Library          : HW1
+* Cell             : inv
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xmo out in gnd! gnd! n08 l=0.014u nf=1 nfin=2
+xm1 out in net19 net19 p08 l=0.014u nf=1 m=1 nfin=2
+vdd net19 gnd! dc='0.8V'
+vin in gnd! dc=0 pulse ( 0 0.8 10n 0.1n 0.1n 50n 100n )
+c7 out gnd! c=1p
+
+
+
+
+
+
+
+
+
+.op
+.dc device=vin param=dc '0' '0.8' '0.001' name=dc
+.tran '0.1ns' '500ns' name=tran
+
+.option primesim_probe_passive_device = 2
+.probe v(*) level=1
+.probe op v(*) level=1
+.probe i(*) level=1
+.probe op i(*) level=1
+.probe op op(*)
+.probe dc v(in) v(out)
+.probe op v(in) v(out)
+.probe tran v(in) v(out)
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+.option s_elem_cache_dir = "/home/m111/m111063517/.synopsys_custom/sparam_dir"
+.option pva_output_dir = "/home/m111/m111063517/.synopsys_custom/pva_dir"
+.option primesim_keep_0v_dcvs_op = 1
+.option primesim_new_op_flow = 1
+
+
+
+
+
+
+
+
+.end

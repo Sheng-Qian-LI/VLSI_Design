@@ -1,0 +1,36 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  test
+* Top Cell Name: nand2
+* View Name:     schematic
+* Netlisted on:  Oct 16 17:11:09 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+************************************************************************
+* Library Name: test
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 VDD VSS in out
+*.PININFO VDD:I VSS:I in:I out:O
+MM0 out in VDD net06 PM W=500.0n L=180.00n m=1
+MM1 out in VSS net10 NM W=500.0n L=180.00n m=1
+
+
+.op
+.ENDS
+

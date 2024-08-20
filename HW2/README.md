@@ -18,8 +18,8 @@
   ### (I) &nbsp;&nbsp; Y = A·B·C+D
   #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1. &nbsp; transistor-level schematic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stick diagram    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.  &nbsp; Layout
 
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/d2c2147b-59d5-4ce7-9564-63f2aaab6e1c" alt="image" width="300" height="300"> &nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/2873326a-406e-45cd-ab6a-c2ff60709dcb" alt="image" width="300" height="300">   &nbsp;&nbsp;&nbsp; <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/ca7fe70a-aa3c-45b3-a245-7e12a7729201">  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/d2c2147b-59d5-4ce7-9564-63f2aaab6e1c" alt="image" width="300" height="300"> &nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/63be66d8-a1de-4873-af2f-4bd7baac049f" alt="image" width="300" height="300">   &nbsp;&nbsp;&nbsp; <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/ca7fe70a-aa3c-45b3-a245-7e12a7729201">  
 
   #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   3. &nbsp; DRC & LVS
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/a099b8cd-9162-464a-bcf8-67290233f0e0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/351e689f-90f9-4173-9b3c-204f570dc0be">  
@@ -28,8 +28,8 @@
   ### (II) &nbsp;&nbsp; Y = (A+B)·(C+D) 
   #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1. &nbsp; transistor-level schematic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stick diagram    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.  &nbsp; Layout
 
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/b6462ac0-65ce-4c30-ab71-7c2f6e8f586f" alt="image" width="300" height="300"> &nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/a0002213-39fe-4364-9c79-e449899eb672" alt="image" width="300" height="300">   &nbsp;&nbsp;&nbsp; <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/4f7b8811-ea47-4527-9d31-d4ce2dd39859">  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/ba071b3b-406a-4fc3-bee2-32063e98d3ad" alt="image" width="300" height="300"> &nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/3dad3bcb-ce1b-4013-93e7-c4017a7df0e8" alt="image" width="300" height="300">   &nbsp;&nbsp;&nbsp; <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/4f7b8811-ea47-4527-9d31-d4ce2dd39859">  
 
   #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   3. &nbsp; DRC & LVS
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/10daa2d6-8dbb-424a-b9bd-d345af78dcf7"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/9d38d772-4601-457a-991d-5ad527423299">   

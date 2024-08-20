@@ -6,5 +6,8 @@
 
   ## 180nm
 ### Specification
+##### NMOS : (W/L) = 1um/0.18um  
+##### VDD = 1V
+
 
 ### Result

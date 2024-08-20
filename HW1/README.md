@@ -28,3 +28,8 @@
 |  TT    |        2        |        2        |        
 |  SS    |        6        |        5        | 
 |  FF    |        2        |        2        | 
+
+
+
+## Compare
+######  Since the number of fins can be adjusted in the 14nm process, it is more challenging to fine-tune the Vm to a close value. In the 180nm process, the inverter achieves better output waveforms in the FF corner, whereas in the 14nm process, the output waveform is better restored to the input in the SS corner. This suggests that with larger process technologies, the components need to operate at high voltage and low temperature, while as the process size shrinks, better performance is achieved at low voltage and high temperature.

@@ -13,3 +13,18 @@
 | Corner | PMOS size (W/L) |
 | -----  |     --------    |
 |  TT    |    5.4u/0.18u   |
+|  SS    |    4.4u/0.18u   |
+|  FF    |    5.4u/0.18u   |
+
+
+
+  ## 14nm
+### Specification
+###### VDD = 0.8V  
+
+### Result
+| Corner |     NMOS fin    |     PMOS fin    |
+| -----  |     --------    |     --------    |
+|  TT    |        2        |        2        |        
+|  SS    |        6        |        5        | 
+|  FF    |        2        |        2        | 

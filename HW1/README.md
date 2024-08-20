@@ -2,5 +2,5 @@
 
 # **HW1 : Inverter simulation**  
 
-  #### In this assignment, I will design the size of the inverter and perform simulations using 180nm and 14nm process technologies. The simulations will be conducted under three process corners (TT, SS, FF).
+  #### In this assignment, I will design the size of the inverter and perform simulations using 180nm and 14nm process technologies. The simulations will be simulated under three process corners (TT, SS, FF).
 

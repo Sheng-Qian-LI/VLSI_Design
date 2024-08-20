@@ -11,4 +11,5 @@
 
 ### Result
 | Corner | PMOS size (W/L) |
-|  TT    | 5.4u/0.18u      |
+| -----  |     --------    |
+|  TT    |    5.4u/0.18u   |

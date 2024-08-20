@@ -78,4 +78,28 @@
   ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 右圖，調整 Vin = Vout 的情形，VTC 與未調整的不同，VIL 變成 TT>SS=FF，VIH也一樣，所以在 process corner 的模擬下可以發現，14nm 製程 的電壓穩定度相對於 180nm 較小，讓元件在不同的環境下較不容易損壞。
   <img width="60" height="55" alt="image" src="https://github.com/user-attachments/assets/19ca5a03-7e4d-4684-944c-a536a2f8a3a2"> &nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/b6dc7df2-a84a-4adf-aaf8-d98f13cb06bb"> &nbsp;&nbsp;&nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/d9304cc0-fa1c-457b-923e-fffb86a57ffe">
 ## 3️⃣Third part
+  ### (a) &nbsp; 180nm
+  #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specification :
+  <table>
+  <tr>
+    <th>TT corner</th>
+    <th>NMOS</th>
+    <th>PMOS</th>
+  </tr>
+  <tr>
+    <td>(W/L)</td>
+    <td>3u/0.2u</td>
+    <td>4.25u/0.2u</td>
+  </tr>
+  <tr>
+    <td>VDD</td>
+    <td colspan="2" align="center">1V</td>
+  </tr>
+  </table>
+
+  #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result :
+  ##### Input signal (A or B) = 0V - 1V @ 2MHz with rising time / falling time =0.1ns and a loading capacitor Cload = 1.5pF at output.
+
+
+
   

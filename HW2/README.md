@@ -78,6 +78,14 @@
   ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 右圖，調整 Vin = Vout 的情形，VTC 與未調整的不同，VIL 變成 TT>SS=FF，VIH也一樣，所以在 process corner 的模擬下可以發現，14nm 製程 的電壓穩定度相對於 180nm 較小，讓元件在不同的環境下較不容易損壞。
   <img width="60" height="55" alt="image" src="https://github.com/user-attachments/assets/19ca5a03-7e4d-4684-944c-a536a2f8a3a2"> &nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/b6dc7df2-a84a-4adf-aaf8-d98f13cb06bb"> &nbsp;&nbsp;&nbsp; <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/d9304cc0-fa1c-457b-923e-fffb86a57ffe">
 ## 3️⃣Third part
+  #### Design two 2-input NAND gate
+
+  ### Definition
+  ##### tpHL (from input to falling output crossing 0.5VDD)
+  ##### tpLH (from input to rising output crossing 0.5VDD)
+  ##### tr (from output crossing 0.2VDD to 0.8VDD)
+  ##### tf (from output crossing 0.8VDD to 0.2VDD)
+  
   ### (a) &nbsp; 180nm
   #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specification :
   <table>
@@ -99,7 +107,158 @@
 
   #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result :
   ##### Input signal (A or B) = 0V - 1V @ 2MHz with rising time / falling time =0.1ns and a loading capacitor Cload = 1.5pF at output.
+  <table>
+  <tr>
+    <th> </th>
+    <th colspan="3" align="center">Csae 1</th>
+    <th colspan="3" align="center">Case 2</th>
+  </tr>
+  <tr>
+    <td>InputA</td>
+    <td colspan="3" align="center">CLK</td>
+    <td colspan="3" align="center">1V</td>
+  </tr>
+  <tr>
+    <td>InputB</td>
+    <td colspan="3" align="center">1V</td>
+    <td colspan="3" align="center">CLK</td>
+  </tr>
+  <tr>
+    <td>Corner</td>
+    <td>TT</td>
+    <td>SS</td>
+    <td>FF</td>
+    <td>TT</td>
+    <td>SS</td>
+    <td>FF</td>
+  </tr>
+  <tr>
+    <td>tpHL</td>
+    <td>3.1ns</td>
+    <td>7.3ns</td>
+    <td>2.4ns</td>
+    <td>3.2ns</td>
+    <td>7.2ns</td>
+    <td>2.4ns</td>
+  </tr>
+  <tr>
+    <td>tpLH</td>
+    <td>4ns</td>
+    <td>9ns</td>
+    <td>3ns</td>
+    <td>4ns</td>
+    <td>9ns</td>
+    <td>3ns</td>
+  </tr>
+  <tr>
+    <td>tr</td>
+    <td>5.66ns</td>
+    <td>11.8ns</td>
+    <td>4.46ns</td>
+    <td>5.62ns</td>
+    <td>11.6ns</td>
+    <td>4.36ns</td>
+  </tr>
+  <tr>
+    <td>tf</td>
+    <td>4.13ns</td>
+    <td>9.48ns</td>
+    <td>3.31ns</td>
+    <td>4.2ns</td>
+    <td>9.5ns</td>
+    <td>3.34ns</td>
+  </tr>
+  </table>
+
+##### 在兩個 case 中 TT,SS,FF 皆是 tpHL < tpLH，在 tr 和 tf 的比較上 也是相同的結果，Case1 和 Case2 相比，Case1 的 tpHL 和 tpLH 的差異不大，但 tr 在 Case1 的時間皆大於 Case2，tf 則相反。
+##### 在 Case1 的 NAND 中，input A 為 CLK 的頻率在在電壓零時 pmos 導通， 電壓為一時 nmos 導通，input B 為直流電壓 1V，所以 pmos 一直維持截止，而 nmos 一直導通。tpLH是 falling input 電壓 0.5V 到 rising output 電壓 0.5V 的時 間，所以要計算 input A 的 pmos 的 propagation delay，tpLH則是 rising input 電壓 0.5V 到 falling output 電壓 0.5V 的時間，需要計算 contamination dealy。
+##### 在 Case2 中的 tf 時間都相對較長一點，我推測是因為 input B 在 nmos 離 output 端較遠，所以花的時間較長，而 tr 則是因為 pmos 距離 output 較近，所以 delay 時間較短。
+##### TT,SS,FF 三種 coner，也可以發現因為 SS 的 mos 開關速度較慢所以 delay 較長，FF 開關速度較快，delay 時間較短，TT 則界在兩者之間。
 
 
+  ### (a) &nbsp; 14nm
+  #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specification :
+  <table>
+  <tr>
+    <th>TT corner</th>
+    <th>NMOS</th>
+    <th>PMOS</th>
+  </tr>
+  <tr>
+    <td>fin</td>
+    <td>4</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>VDD</td>
+    <td colspan="2" align="center">1V</td>
+  </tr>
+  </table>
 
+  #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result :
+  ##### Input signal (A or B) = 0V - 1V @ 2MHz with rising time / falling time =0.1ns and a loading capacitor Cload = 1.5pF at output.
+  <table>
+  <tr>
+    <th> </th>
+    <th colspan="3" align="center">Csae 1</th>
+    <th colspan="3" align="center">Case 2</th>
+  </tr>
+  <tr>
+    <td>InputA</td>
+    <td colspan="3" align="center">CLK</td>
+    <td colspan="3" align="center">1V</td>
+  </tr>
+  <tr>
+    <td>InputB</td>
+    <td colspan="3" align="center">1V</td>
+    <td colspan="3" align="center">CLK</td>
+  </tr>
+  <tr>
+    <td>Corner</td>
+    <td>TT</td>
+    <td>SS</td>
+    <td>FF</td>
+    <td>TT</td>
+    <td>SS</td>
+    <td>FF</td>
+  </tr>
+  <tr>
+    <td>tpHL</td>
+    <td>3.5ns</td>
+    <td>3.4ns</td>
+    <td>3.2ns</td>
+    <td>3.4ns</td>
+    <td>3.4ns</td>
+    <td>3.2ns</td>
+  </tr>
+  <tr>
+    <td>tpLH</td>
+    <td>11ns</td>
+    <td>9ns</td>
+    <td>9ns</td>
+    <td>11ns</td>
+    <td>9ns</td>
+    <td>9ns</td>
+  </tr>
+  <tr>
+    <td>tr</td>
+    <td>14.2ns</td>
+    <td>12.9ns</td>
+    <td>12.7ns</td>
+    <td>14.2ns</td>
+    <td>12.6ns</td>
+    <td>12.7ns</td>
+  </tr>
+  <tr>
+    <td>tf</td>
+    <td>4.94ns</td>
+    <td>4.8ns</td>
+    <td>4.53ns</td>
+    <td>4.9ns</td>
+    <td>4.81ns</td>
+    <td>4.53ns</td>
+  </tr>
+  </table>  
   
+### ⭐ Disussion ⭐
+##### 14nm 的 delay 與 180nm 相比，tpHL 的 delay 值都差不多，除了 SS 下降了許多，但三種 corner 的 tpLH 值都呈現上升 的趨勢，tr 也都呈現上升的趨勢，tf 也是 SS 下降許多 TT,FF 沒什麼區別，由此 可發現，14nm 製程的模擬上，output 端的 delay 會特別的大，我認為是因為製 程變小，所以輸出電容較小，使負載電容相對變大，所以會有較長的 delay。
